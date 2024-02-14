@@ -24,8 +24,39 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="{{ route('welcome') }}" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="#about">About </a></li>
+                        @auth
+                    @if(auth()->user()->role!='admin')
+                        <li class="submenu">
+                            <a href="javascript:;">admin panel</a>
+                            <ul>
+                                <li class="scroll-to-section"><a href="#about">About </a></li>
                         <li class="scroll-to-section"><a href="#reservation">Contact </a></li> 
+                            </ul>
+                        </li>
+
+
+                        @endif
+                        @endauth
+                        
+
+
+                        @auth
+                        @if(auth()->user()->role=='admin')
+                        <li class="submenu">
+                            <a href="javascript:;">admin panel</a>
+                            <ul>
+                                <li class="scroll-to-section"><a href="{{ route('createproject') }}">create project</a></li>
+                            </ul>
+                        </li>
+
+
+                        @endif
+                        @endauth
+
+
+
+
+
 
                         <li class="submenu">
                             <a href="javascript:;">mashin learning</a>
