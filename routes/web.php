@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\isadmin;
+use App\Livewire\Createp;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {return view('welcome');});
 Route::get('/', function () {return view('welcome');})->name('welcome');
+
+
+
+Route::get('/admin/createproject', function () {
+    return view('/admin/createproject');
+})->middleware(['auth', 'verified','isadmin'])->name('createproject');
+
+
+
+Route::get('/createp',Createp::class);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
