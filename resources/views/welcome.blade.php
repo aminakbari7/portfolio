@@ -70,6 +70,12 @@
                             <img src="assets/images/tracking.jpg" alt="">
                         </div>
                       </div>
+
+                      <div class="item">
+                        <div class="img-fill">
+                            <img src="assets/images/chat.png" alt="">
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
