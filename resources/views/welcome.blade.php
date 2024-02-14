@@ -46,8 +46,9 @@
             <div class="col-lg-4">
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>welcome</h4>
-                        <h6>i like creat project</h6>
+                        <h4>HI</h4>
+                        <h6>i am amin akbari</h6>
+                        <h9>I am interested in designing and programming in machine learning and webapp(larave-livewire)</h9>
                         <div class="main-white-button scroll-to-section">
                             <a href="#reservation">Contact Me</a>
                         </div>
@@ -86,7 +87,7 @@
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>About me</h6>
-                            <h2>My name is amin akbari</h2>
+                            <h2>who i am?</h2>
                         </div>
                         <p>i did great project on my  <a href="https://github.com/aminakbari7" target="_blank" rel="sponsored">Github</a><br>I got a bachelor's degree in Dezful University of Technology with an average of 16.94 in 1402 <br><br>i will never stop</p>
                         <div class="row">
@@ -125,10 +126,10 @@
                 <div class="col-lg-6 align-self-center">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>Contact Us</h6>
+                            <h6>Contact me</h6>
                             <h2>Here You Can Make A connect to me</h2>
                         </div>
-                        <p>i will happy to work together</p>
+                        <p>i will be happy to work together</p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="phone">
