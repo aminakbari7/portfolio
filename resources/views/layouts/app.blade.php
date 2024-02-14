@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css')}}">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -40,6 +41,7 @@
                 {{ $slot }}
             </main>
         </div>
+        @livewireScripts
     </body>
     <script src="{{asset('assets/js/jquery-2.min.js')}}"></script>
 
