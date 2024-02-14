@@ -88,7 +88,7 @@
                             <h6>About me</h6>
                             <h2>My name is amin akbari</h2>
                         </div>
-                        <p>i did great project on my  <a href="https://github.com/aminakbari7" target="_blank" rel="sponsored">Github</a> aaaaaaaaaaaaaaaaa <br><br>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+                        <p>i did great project on my  <a href="https://github.com/aminakbari7" target="_blank" rel="sponsored">Github</a><br>I got a bachelor's degree in Dezful University of Technology with an average of 16.94 in 1402 <br><br>i will never stop</p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/face.png" alt="">
