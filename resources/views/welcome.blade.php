@@ -126,7 +126,7 @@
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>Contact Us</h6>
-                            <h2>Here You Can Make A Reservation Or Just walkin to me</h2>
+                            <h2>Here You Can Make A connect to me</h2>
                         </div>
                         <p>i will happy to work together</p>
                         <div class="row">
