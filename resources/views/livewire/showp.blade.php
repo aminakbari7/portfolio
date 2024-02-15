@@ -27,6 +27,18 @@
                <td><a wire:click="deletep({{ $ml->id }})" class="btn btn-danger  text-center ">delete</a></td>
                <td><a wire:click="updatep({{ $ml->id }})" class="btn btn-warning  text-center ">update</a></td>
             </tr>
+            @if($upkey==1)
+            <tr>
+              <td>new</td>
+              <td><input type="text"  class="form-control red" value="{{ $ml->title }}" placeholder="{{ $ml->title }}"   wire:model="newtitle" /> </td>
+              <td> <input type="text"  class="form-control" value="{{ $ml->link }}" placeholder="{{ $ml->link }}" wire:model="newlink" /> </td>
+              <td> <input type="file"  class="form-control" value="{{ $ml->image }}" placeholder="{{ $ml->image }}" wire:model="newimage" /> </td>
+              <td> <input type="text"  class="form-control" value="{{ $ml->body }}" placeholder="{{ $ml->body }}" wire:model="newbody" /> </td>
+              <td><button wire:click="edit({{ $ml->id }})"type="submit" name="submit" class="btn btn-success  mb-4 text-center" style="background-color: green">save</button></td>
+       
+             </tr>
+
+            @endif
             @endforeach
           </tbody>
         </table> 
