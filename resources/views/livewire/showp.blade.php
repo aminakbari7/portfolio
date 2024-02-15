@@ -13,6 +13,7 @@
               <th scope="col">image</th>
               <th scope="col">body</th>
               <th scope="col">delete</th>
+              <th scope="col">update</th>
             </tr>
           </thead>
           <tbody>
@@ -24,6 +25,7 @@
                <td>{{ $ml->image }}</td>
                <td>{{ $ml->body }}</td>
                <td><a wire:click="deletep({{ $ml->id }})" class="btn btn-danger  text-center ">delete</a></td>
+               <td><a wire:click="updatep({{ $ml->id }})" class="btn btn-warning  text-center ">update</a></td>
             </tr>
             @endforeach
           </tbody>
