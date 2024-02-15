@@ -24,20 +24,22 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="{{ route('welcome') }}" class="active">Home</a></li>
+
+
                         @auth
-                    @if(auth()->user()->role!='admin')
-                        <li class="submenu">
-                            <a href="javascript:;">admin panel</a>
-                            <ul>
-                                <li class="scroll-to-section"><a href="#about">About </a></li>
-                        <li class="scroll-to-section"><a href="#reservation">Contact </a></li> 
-                            </ul>
-                        </li>
-
-
+                        @if(auth()->user()->role!='admin')
+                            <li class="scroll-to-section"><a href="#about">About </a></li>
+                            <li class="scroll-to-section"><a href="#reservation">Contact </a></li> 
                         @endif
                         @endauth
-                        
+
+                        @if (Route::has('login'))
+                        @auth  
+                        @else
+                        <li class="scroll-to-section"><a href="#about">About </a></li>
+                            <li class="scroll-to-section"><a href="#reservation">Contact </a></li> 
+                        @endauth
+                        @endif
 
 
                         @auth
