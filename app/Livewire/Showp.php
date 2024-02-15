@@ -13,6 +13,7 @@ class Showp extends Component
     public $up;
     public $upkey=-1;
     public $ed;
+    public $newtitle=null,$newlink=null,$newbody=null;
     public function deletep($id)
     {
         $this->del=$id;
@@ -25,7 +26,23 @@ class Showp extends Component
     public function edit($id)
     {
         $this->ed=$id;
-        
+        $temp=machinelearning::find($this->ed);
+        if($this->newtitle!=null)
+        {
+            $temp->title= $this->title;
+        }
+        if($this->newlink!=null)
+        {
+            $temp->link = $this->newlink;
+        }
+        if($this->newbody!=null)
+        {
+            $temp->body= $this->newbody;
+        }
+        if($this->newtitle!=null || $this->newbody!=null || $this->newlink!=null)
+        {
+            $temp->save();
+        }
         $ml=machinelearning::all();
         $this->upkey=-1;
         return view('livewire.showp',['ml'=>$ml]);
