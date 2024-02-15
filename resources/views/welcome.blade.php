@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css')}}">
 
-    <title>my job</title>
+    <title>welcome to my web-app</title>
 
   
 
