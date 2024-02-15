@@ -31,7 +31,15 @@
              <textarea  wire:model="body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
            </div>  
            <br>
+
            <!-- Submit button -->
+           @if (session()->exists('msg'))
+                <div x-data="{show: true}" x-init="setTimeout(() => show = false, 1000)" x-show="show">
+                    <div class="alert alert-success">
+                        {{ session('msg') }}
+                    </div>
+                </div>
+              @endif
            <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">create</button>
          </form>
        </div>
