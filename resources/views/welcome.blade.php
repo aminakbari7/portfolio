@@ -19,11 +19,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css')}}">
 
     <title>my job</title>
-<!--
 
-
--->
-    <!-- Additional CSS Files -->
   
 
     </head>
