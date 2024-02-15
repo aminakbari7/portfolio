@@ -1,56 +1,41 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="contact-form">
-                <form id="contact" action="" method="post" >
-                  <div class="row">
-                    <div class="col-lg-12">
-                        <h4>new project</h4>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                      <fieldset>
-                        <input name="name" type="text" id="name" placeholder="tiltle*" required="">
-                      </fieldset>
-                    </div>
+<div class="container-fluid" style="margin-top: 100px" dir="rtl">
+  <div class="row">
+   <div class="col">
+     <div class="card">
+       <div class="card-body">
+         <h5 class="card-title mb-5 d-inline">Create Product</h5>
 
+     <form wire:submit="save">
+           <!-- Email input -->
+           <div class="form-outline mb-4 mt-4">
+             <input type="text" wire:model="title" id="form2Example1" class="form-control" placeholder="tiltle" />
+           </div>
+           <div class="form-outline mb-4 mt-4">
+             <input type="text" wire:model="link" id="form2Example1" class="form-control" placeholder="link" />
+            
+           </div>
+           <div class="form-outline mb-4 mt-4">
+             <input type="file" wire:model="image" id="form2Example1" class="form-control"  />
+           </div>
+           <div class="form-outline mb-4 mt-4">
 
+               <select wire:model="case" class="form-select  form-control" aria-label="Default select example">
+                 <option selected>Choose Type</option>
+                 <option value="machine-learning">machine-learning</option>
+                 <option value="web-app">web-app</option>
+               </select>
+             </div>
 
-                    <div class="col-lg-6 col-sm-12">
-                      <fieldset>
-                      <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="link" required="">
-                    </fieldset>
-                    </div>
-                    
-                    <div class="form-group col-lg-6 col-sm-12">
-                        <fieldset>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>which case</option>
-                          <option>machine learning</option>
-                          <option>web app</option>
-                        </select>
-                    </fieldset>
-
-                    <div class="col-lg-12">
-               
-                        <input type="file">
-                      </div>
-                 
-                    </div>
-
-
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" id="message" placeholder="body" required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="main-button-icon">add</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-            </div>
-        </div>
-    </div>
+           <div class="form-group">
+             <label for="exampleFormControlTextarea1">Description</label>
+             <textarea  wire:model="body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+           </div>  
+           <br>
+           <!-- Submit button -->
+           <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">create</button>
+         </form>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
