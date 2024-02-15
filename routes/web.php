@@ -27,7 +27,7 @@ Route::get('/admin/createproject', function () {
 
 
 
-Route::get('/createp',Createp::class);
+Route::get('/createp',Createp::class)->middleware(['auth', 'verified','isadmin']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
