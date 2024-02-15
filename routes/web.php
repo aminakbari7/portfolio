@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\isadmin;
+use App\Livewire\Adminproject;
 use App\Livewire\Createp;
 use App\Livewire\Showp;
 
@@ -32,7 +33,7 @@ Route::get('/admin/showprojects', function () {
 
 
 Route::get('/createp',Createp::class)->middleware(['auth', 'verified','isadmin']);
-Route::get('/showp',Showp::class)->middleware(['auth', 'verified','isadmin']);
+Route::get('/adminproject',Adminproject::class)->middleware(['auth', 'verified','isadmin']);
 
 
 
