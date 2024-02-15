@@ -58,6 +58,7 @@ class Showp extends Component
     {
         
         $ml=machinelearning::all();
-        return view('livewire.showp',['ml'=>$ml]);
+        $web=web::all();
+        return view('livewire.showp',['ml'=>$ml,'web'=>$web]);
     }
 }
