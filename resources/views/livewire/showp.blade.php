@@ -41,10 +41,65 @@
             @endif
             @endforeach
           </tbody>
-        </table> 
       </div>
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </div>
+        
 
+      <div class="card-body" style="background-color: rgb(221, 235, 230)">  
+	   </table> 
+        <table class="table">
+          <thead style="background-color: rgb(223, 223, 185)">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">title</th>
+              <th scope="col">link</th>
+              <th scope="col">image</th>
+              <th scope="col">body</th>
+              <th scope="col">delete</th>
+              <th scope="col">update</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach ($web as $web )
+            <tr>
+               <th scope="row">1</th>
+               <td>{{ $web->title }}</td>
+               <td>{{ $web->link }}</td>
+               <td>{{ $web->image }}</td>
+               <td>{{ $web->body }}</td>
+               <td><a wire:click="deletep({{ $web->id }})" class="btn btn-danger  text-center ">delete</a></td>
+               <td><a wire:click="updatep({{ $web->id }})" class="btn btn-warning  text-center ">update</a></td>
+            </tr>
+            @if($upkey==1)
+            <tr>
+              <td>new</td>
+              <td><input type="text"  class="form-control red" value="{{ $web->title }}" placeholder="{{ $web->title }}"   wire:model="newtitle" /> </td>
+              <td> <input type="text"  class="form-control" value="{{ $web->link }}" placeholder="{{ $web->link }}" wire:model="newlink" /> </td>
+              <td> <input type="file"  class="form-control" value="{{ $web->image }}" placeholder="{{ $web->image }}" wire:model="newimage" /> </td>
+              <td> <input type="text"  class="form-control" value="{{ $web->body }}" placeholder="{{ $web->body }}" wire:model="newbody" /> </td>
+              <td><button wire:click="edit({{ $web->id }})"type="submit" name="submit" class="btn btn-success  mb-4 text-center" style="background-color: green">save</button></td>
+       
+             </tr>
+
+            @endif
+            @endforeach
+          </tbody>
+        </table> 
+		</div>
+
+	
+	
 </div>
