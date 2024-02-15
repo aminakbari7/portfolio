@@ -14,6 +14,7 @@ class Createp extends Component
     public $link;
     public $body ;
     public $case;
+    
     public function save()
     {
 
