@@ -2,8 +2,7 @@
 
 namespace App\Livewire;
 use Livewire\WithFileUploads;
-use App\Models\web;
-use App\Models\machinelearning;
+use App\Models\project;
 use Livewire\Component;
 
 class Createp extends Component
@@ -20,27 +19,17 @@ class Createp extends Component
 
         $namei = md5($this->image . microtime()).'.'.$this->image->extension();
         $this->image->storeAs('images', $namei,'public');
-    if($this->case=='web-app')
-    {
-        web::Create([
+        project::Create([
         'body'=>$this->body,
        'image'=>$namei,
-        'title'=>$this->title,
+       'title'=>$this->title,
+        'case'=>$this->case,
         'link'=>$this->link]);
         Session()->flash('msg', 'اضافه شد!'); 
         $this->render();
-    }
+ 
 
-     if($this->case=='machine-learning')
-     {
-         machinelearning::Create([
-            'body'=>$this->body,
-            'image'=>$namei,
-             'title'=>$this->title,
-             'link'=>$this->link]);
-        Session()->flash('msg', 'اضافه شد!'); 
-        $this->render();
-    }
+   
 
     }
     
