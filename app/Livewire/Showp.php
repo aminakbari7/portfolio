@@ -11,6 +11,8 @@ class Showp extends Component
 {
     public $del;
     public $up;
+    public $upkey=-1;
+    public $ed;
     public function deletep($id)
     {
         $this->del=$id;
@@ -20,9 +22,18 @@ class Showp extends Component
         $ml=machinelearning::all();
         return view('livewire.showp',['ml'=>$ml]);
     }
+    public function edit($id)
+    {
+        $this->ed=$id;
+        
+        $ml=machinelearning::all();
+        $this->upkey=-1;
+        return view('livewire.showp',['ml'=>$ml]);
+    }
     public function updatep($id)
     {
         $this->up=$id;
+        $this->upkey=1;
         $ml=machinelearning::all();
         return view('livewire.showp',['ml'=>$ml]);
     }
