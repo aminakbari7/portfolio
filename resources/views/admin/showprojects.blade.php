@@ -24,7 +24,7 @@
 
 <body>
 @include('layouts.navigation')
-@livewire('showp')
+@livewire('adminproject')
 
   <script src="{{asset('assets/js/jquery-2.min.js')}}"></script>
 
