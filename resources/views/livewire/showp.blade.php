@@ -23,7 +23,7 @@
                <td>{{ $ml->link }}</td>
                <td>{{ $ml->image }}</td>
                <td>{{ $ml->body }}</td>
-               <td><a href="delete-products.html" class="btn btn-danger  text-center ">delete</a></td>
+               <td><a wire:click="deletep({{ $ml->id }})" class="btn btn-danger  text-center ">delete</a></td>
             </tr>
             @endforeach
           </tbody>
