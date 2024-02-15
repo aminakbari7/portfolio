@@ -4,9 +4,8 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href=""{{ route('welcome') }}" class="logo" >
-                        <img style="
-                        background-blend-mode: multiply; border-radius:10px" src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                    <a href="{{ route('welcome') }}" class="logo" >
+                        <img style="background-blend-mode: multiply; border-radius:10px" src="assets/images/klassy-logo.png" align="klassy cafe html template">
                     </a>
                     <!-- ***** Logo End ***** -->
 
@@ -48,6 +47,7 @@
                             <a href="javascript:;">admin panel</a>
                             <ul>
                                 <li class="scroll-to-section"><a href="{{ route('createproject') }}">create project</a></li>
+                                <li class="scroll-to-section"><a href="{{ route('showprojects') }}">show projects</a></li>
                             </ul>
                         </li>
 
