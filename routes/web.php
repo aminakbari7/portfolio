@@ -26,29 +26,24 @@ Route::get('/', function () {return view('welcome');})->name('welcome');
 
 
 
-Route::get('/admin/createproject', function () {return view('/admin/createproject');
-})->middleware(['auth', 'verified','isadmin'])->name('createproject');
-Route::get('/admin/showprojects', function () {
-    return view('/admin/showprojects');
-})->middleware(['auth', 'verified','isadmin'])->name('showprojects');
-Route::get('/admin/showusers', function () {
-    return view('/admin/showusers');
-})->middleware(['auth', 'verified','isadmin'])->name('showusers');
+//----------- admins jobs
+Route::middleware(['auth', 'verified','isadmin'])->group(function () {
+    Route::get('/admin/createproject', function () {return view('/admin/createproject');})->name('createproject');
+    Route::get('/admin/showprojects', function () { return view('/admin/showprojects');})->name('showprojects');
+    Route::get('/admin/showusers', function () {return view('/admin/showusers');})->name('showusers');
 
+    //----- livewire admin 
+    Route::get('/createp',Createp::class);
+    Route::get('/adminproject',Adminproject::class);
+    Route::get('/adminusers',Adminusers::class);
 
-Route::get('/createp',Createp::class)->middleware(['auth', 'verified','isadmin']);
-Route::get('/adminproject',Adminproject::class)->middleware(['auth', 'verified','isadmin']);
-Route::get('/adminusers',Adminusers::class)->middleware(['auth', 'verified','isadmin']);
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+});
+///-----users auth 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/dashboard', function () {return view('dashboard');});
 });
 
 require __DIR__.'/auth.php';
