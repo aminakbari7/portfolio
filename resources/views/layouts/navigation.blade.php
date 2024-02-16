@@ -22,7 +22,7 @@
 
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="{{ route('welcome') }}" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('welcome') }}" >Home</a></li>
 
 
                         @auth
@@ -43,11 +43,14 @@
 
                         @auth
                         @if(auth()->user()->role=='admin')
+
                         <li class="submenu">
                             <a href="javascript:;">admin panel</a>
                             <ul>
                                 <li class="scroll-to-section"><a href="{{ route('createproject') }}">create project</a></li>
                                 <li class="scroll-to-section"><a href="{{ route('showprojects') }}">show projects</a></li>
+                                <li class="scroll-to-section"><a href="{{ route('showusers') }}" >users</a></li>
+
                             </ul>
                         </li>
 
