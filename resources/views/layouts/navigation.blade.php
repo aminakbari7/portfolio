@@ -5,7 +5,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="{{ route('welcome') }}" class="logo" >
-                        <img style="background-blend-mode: multiply; border-radius:10px" src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                        <img style="background-blend-mode: multiply; border-radius:10px" src="{{ asset('assets/images/klassy-logo.png')}}">
                     </a>
                     <!-- ***** Logo End ***** -->
 
