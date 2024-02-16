@@ -37,7 +37,7 @@
  
                          </td>
                        </tr>
-                    </td>
+                   
                     @if ($keyup == 1 && $keyid == $projects->id)
                                         <tr>
                                             <td>new</td>
